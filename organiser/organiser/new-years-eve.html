@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-AU" data-root="../" data-theme="light" data-cb="none" data-text="base" data-motion="auto" data-font="default" data-ls="normal" data-lh="normal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organiser — New Year&#39;s Eve · Parramatta Explorer</title>
+<meta name="description" content="Organiser readiness check for New Year&#39;s Eve.">
+<meta name="theme-color" content="#034f84">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var k={theme:'pe-theme',cb:'pe-cb',text:'pe-text',motion:'pe-motion',font:'pe-font',ls:'pe-ls',lh:'pe-lh'},f={theme:'light',cb:'none',text:'base',motion:'auto',font:'default',ls:'normal',lh:'normal'};for(var n in k){d.setAttribute('data-'+n,localStorage.getItem(k[n])||f[n]);}}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="net-banner" class="net-banner" role="status" hidden>You're offline. Pages you've already opened, and the offline schematic map, still work.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="#92a8d1" stroke-width="1.6"/><path d="M16 8l-2.4 5.6L8 16l2.4-5.6z" fill="#FFC93C"/></svg>
+      <span>Parramatta Explorer</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary"><ul><li><a href="../index.html">Explore</a></li><li><a href="../guide.html">How to use</a></li><li><a href="../report.html">Report a problem</a></li><li><a href="../about.html">About &amp; data</a></li><li><a href="../settings.html">Settings</a></li></ul></nav>
+      <button type="button" class="speak" hidden aria-pressed="false" data-label="Read page"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Read page</span></button>
+      <a class="btn btn-sun btn-small" href="../signin.html">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+<div class="stack-lg">
+  <header class="stack">
+    <div class="row row-tight xsmall"><span class="pill">Organiser workspace</span></div>
+    <div class="row"><h1>Readiness check: New Year&#39;s Eve</h1><button type="button" class="speak" hidden aria-pressed="false" data-label="Listen"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg><span class="speak-text">Listen</span></button></div>
+    <p class="muted">Build the verified access &amp; inclusion plan. AI suggests; you decide.</p>
+    <p class="disclaimer"><strong>Prototype — illustrative data.</strong> This is a student prototype using clearly-labelled synthetic and public seed data. It is best-effort and community-verified, is <strong>not a substitute for official venue information</strong>, and is <strong>not endorsed, funded or procured by Council</strong>. In an emergency call 000.</p>
+    <noscript><p class="notice">The organiser workspace needs JavaScript.</p></noscript>
+  </header>
+
+  <section class="card" style="border-width:1px" aria-labelledby="chk-h">
+    <div class="row between">
+      <div><h2 id="chk-h" style="font-size:1.125rem">Readiness checklist</h2>
+      <p class="muted small">Test the plan against mobility, sensory, cognitive, language, cultural, family and digital-access needs.</p></div>
+      <span class="score" id="score" role="status">0% verified</span>
+    </div>
+    <div id="checklist-body" class="stack" style="margin-top:1rem"></div>
+  </section>
+
+  <section class="ai-panel" aria-labelledby="ai-h">
+    <div class="row between">
+      <div><h2 id="ai-h" style="font-size:1.125rem">AI assist (human-approved)</h2>
+      <p class="muted small">AI drafts suggested attributes and risks. Nothing is published until you approve it.</p></div>
+      <button type="button" id="ai-run" class="btn btn-violet btn-small">Ask AI for suggestions</button>
+    </div>
+    <p id="ai-disclosure" class="small muted card" style="margin-top:0.75rem;border-width:1px" hidden></p>
+    <div id="ai-results"></div>
+  </section>
+
+  <section class="card" style="border-width:1px" aria-labelledby="risk-h">
+    <h2 id="risk-h" style="font-size:1.125rem">Risk register (PS-09)</h2>
+    <p class="muted small">AI may suggest risks, but a human event planner must review and approve them.</p>
+    <ul id="risk-list" style="list-style:none;padding:0;margin:1rem 0 0" class="stack-sm"></ul>
+  </section>
+
+  <section class="card">
+    <h2 style="font-size:1.125rem">Publish the plan</h2>
+    <p class="muted small" style="margin-top:0.25rem">Publishing records who approved each field and stamps a last-verified date. Unconfirmed fields stay labelled as such.</p>
+    <button type="button" id="publish-btn" class="btn btn-primary" style="margin-top:0.75rem">Publish verified plan</button>
+    <p id="publish-msg" role="status" class="small semibold" style="margin-top:0.75rem" hidden>Published (demo). In the full system a change is written to the append-only verification history and the attendee plan updates. In this static prototype nothing is actually saved or sent.</p>
+  </section>
+
+  <p class="small"><a class="link" href="../plan/new-years-eve.html">View the attendee access plan →</a></p>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true" class="bunting "><span class="b-accent"></span><span class="b-sun"></span><span class="b-mint"></span><span class="b-lav"></span><span class="b-sky"></span><span class="b-brand"></span></div>
+  <div class="container footer-grid">
+    <div class="stack-sm">
+      <p style="font-family:var(--font-display);font-weight:700;font-size:1rem">Parramatta Explorer</p>
+      <p>A student prototype for the Build with AI Challenge. Independent — not affiliated with or endorsed by the City of Parramatta.</p>
+      <p>In an emergency call <strong>000</strong>.</p>
+    </div>
+    <div class="stack-sm">
+      <p>We acknowledge the Baramadagal clan of the Dharug Nation, the Traditional Owners of the land and waters of Parramatta, and pay respect to Elders past and present.</p>
+      <p>Event details are drawn from public City of Parramatta information and must be confirmed with the organiser. See <a class="link" href="../about.html">About &amp; data</a>.</p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/render.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/organiser.js"></script>
+</body>
+</html>
